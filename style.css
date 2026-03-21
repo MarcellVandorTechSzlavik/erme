@@ -1,0 +1,224 @@
+/* Alapbeállítások és Változók */
+:root { 
+    --primary: #1a3a5a; 
+    --secondary: #2e7d32; 
+    --bg: #f0f2f5; 
+    --accent: #fbc02d;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: var(--bg); 
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+}
+
+/* Fix fejléc */
+.header { 
+    background: var(--primary); 
+    color: white; 
+    padding: 15px; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+}
+
+.stats-grid { 
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center; 
+}
+
+.stat-val { 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    display: block; 
+}
+
+/* Kereső Konténer */
+.search-container {
+    padding: 10px 15px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+#coin-search {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#coin-search:focus {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(251, 192, 45, 0.4);
+}
+
+/* Főmenü */
+#main-menu { 
+    padding: 15px; 
+}
+
+.menu-card { 
+    background: white; 
+    padding: 20px; 
+    margin-bottom: 12px; 
+    border-radius: 12px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    text-align: center; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    color: var(--primary); 
+    cursor: pointer; 
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.menu-card:active { 
+    background: #eceff1; 
+    transform: scale(0.98); 
+}
+
+/* Katalógus nézet */
+#catalog-view { 
+    display: none; 
+    padding: 10px; 
+    padding-bottom: 80px; 
+}
+
+.back-btn { 
+    background: #455a64; 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+    font-weight: bold;
+    width: 100%; 
+    font-size: 1rem;
+}
+
+/* Érme Csoportok */
+.coin-group { 
+    background: white; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    overflow: hidden; 
+}
+
+.group-header { 
+    padding: 15px; 
+    background: #fff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-weight: bold; 
+    cursor: pointer;
+    user-select: none;
+}
+
+.group-progress {
+    font-size: 0.85rem;
+    background: var(--secondary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 5px;
+    min-width: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.group-percent {
+    background: rgba(0,0,0,0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Érme Sorok */
+.year-list { 
+    display: none; 
+    background: #fafafa; 
+}
+
+.year-row { 
+    display: flex; 
+    align-items: center; 
+    padding: 10px 15px; 
+    border-bottom: 1px solid #eee; 
+}
+
+.year-row.is-collected { 
+    background: #e8f5e9 !important; 
+}
+
+.coin-thumb { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 12px; 
+    border: 1px solid #ccc;
+    cursor: zoom-in;
+}
+
+.year-info { 
+    flex-grow: 1; 
+}
+
+.mintage { 
+    font-size: 0.8rem; 
+    color: #666; 
+    display: block; 
+}
+
+input[type="checkbox"] { 
+    width: 30px; 
+    height: 30px; 
+    accent-color: var(--secondary); 
+    cursor: pointer;
+}
+
+/* Animációk */
+.arrow { 
+    display: inline-block;
+    transition: transform 0.3s ease; 
+}
+
+.open .arrow { 
+    transform: rotate(180deg); 
+}
+
+/* Nagyító (Modal) */
+#image-overlay {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.85); 
+    z-index: 2000; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#zoomed-img { 
+    max-width: 90%; 
+    max-height: 70%; 
+    border-radius: 15px; 
+    border: 3px solid white; 
+}
