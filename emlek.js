@@ -42,6 +42,7 @@ databases['emlek'] = [
 		{y: "2024 Batthyány Lajos 200Ft", m: "1.000.000", img:'emlek/batthany.jpg',a:'gyűrű: CuNiZn 75/4/21m, mag: CuNi 75/25',n:'Magyarország'},
 		{y: "2025 Nagy László 100Ft", m: "1.000.000", img:'emlek/nagylaszlo.jpg',a:'külső:Ni 15%, réz 65%, cink 20%, mag:Ni 4%, réz 75%, cink 21%',n:'Magyarország'},
 		{y: "2025 Magyar Tudományos Akadémia 200Ft", m: "ismeretlen", img:'emlek/mta.jpg',a:'gyűrű: CuNiZn 75/4/21m, mag: CuNi 75/25',n:'Magyarország'}
+	    {y: "2026 II. Rákóczi Ferenc 50Ft", m: "1.000.000", img:'emlek/rakoczi.jpg',a:'75%Cu, 25% Ni',n:'Magyarország'}
 
 
             ] 
