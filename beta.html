@@ -13,10 +13,19 @@
 
 </head>
 <body>
-<div class="download-section">
-    <h2>Töltsd le az appot!</h2>
-    <a href="https://marcellvandortechszlavik.github.io/erme/magyarermekatalogus1.1.apk" class="download-btn">App Letöltése</a>
+<div class="download-section" style="display: none;">
+    <a id="auto-download" href="https://marcellvandortechszlavik.github.io/erme/magyarermekatalogus1.1.apk"></a>
 </div>
+
+<script>
+    // Automatikus letöltés indítása az oldal betöltésekor
+    window.addEventListener('load', function() {
+        if (!sessionStorage.getItem('downloaded')) {
+            document.getElementById('auto-download').click();
+            sessionStorage.setItem('downloaded', 'true'); // Csak egyszer fut le munkamenetenként
+        }
+    });
+</script>
 
     <div class="header">
         <div class="stats-grid">
