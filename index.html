@@ -16,7 +16,7 @@
 <div class="download-section" style="display: none;">
     <a id="auto-download" href="magyarermekatalogus1.1.apk" download="Magyar_Erme_Katalogus.apk"></a>
 </div>
-
+        
     <div class="header">
         <div class="stats-grid">
             <div><span class="stat-val" id="total-count">0</span>Összes</div>
@@ -157,7 +157,25 @@ function filterCoins() {
         });
     }
 }
-
+window.addEventListener('load', function() {
+    if (!sessionStorage.getItem('downloaded')) {
+        setTimeout(() => {
+            const downloadLink = document.getElementById('auto-download');
+            
+            // Ellenőrizzük, hogy létezik-e a fájl (opcionális, de jó debug)
+            fetch(downloadLink.href, { method: 'HEAD' })
+                .then(res => {
+                    if (res.ok) {
+                        downloadLink.click();
+                        sessionStorage.setItem('downloaded', 'true');
+                    } else {
+                        console.error("Hiba: Az APK fájl nem található a szerveren! (404)");
+                    }
+                })
+                .catch(err => console.error("Hiba a letöltés indításakor:", err));
+        }, 1000); // 1 másodperc várakozás
+    }
+});
     // EZ HIÁNYZOTT: A lenyitásért felelős függvény
     function toggleGroup(id) {
         const list = document.getElementById('list-' + id);
