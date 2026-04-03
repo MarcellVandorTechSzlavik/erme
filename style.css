@@ -222,3 +222,44 @@ input[type="checkbox"] {
     border-radius: 15px; 
     border: 3px solid white; 
 }
+
+.coin-details-sub span {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 0.75rem;
+}
+
+/* Keressük meg a .year-row részt és módosítsuk a paddingot */
+.year-row { 
+    display: flex; 
+    align-items: center; 
+    padding: 5px 12px; /* 10px-ről 5px-re csökkentve a függőleges távolság */
+    border-bottom: 1px solid #eee; 
+    min-height: 60px; /* Opcionális: fixálja a sorok magasságát */
+}
+
+/* A szöveges rész sorközének szűkítése */
+.year-info { 
+    flex-grow: 1; 
+    line-height: 1.2; /* Kisebb sorköz a szövegek között */
+}
+
+/* Kifejezetten a veremszám és anyag sorának szűkítése */
+.coin-details-sub, .mintage { 
+    font-size: 0.75rem; 
+    color: #666; 
+    display: block; 
+    margin-top: -2px; /* Kicsit feljebb húzza a másodlagos infót */
+}
+
+/* Hogy az érme neve ne legyen túl messze az évszámtól */
+.coin-name-top {
+    font-size: 0.9rem;
+}
+
+/* A kép méretének finomhangolása, hogy ne nyomja szét a sort */
+.coin-thumb { 
+    width: 45px; 
+    height: 45px; 
+    margin-right: 10px;
+}
